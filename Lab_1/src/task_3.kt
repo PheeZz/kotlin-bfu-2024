@@ -19,6 +19,9 @@ class TripleDigitNumber {
     fun readNumber() {
         println("Введите трехзначное число")
         number = readLine()!!.toInt()
+        if (number < 100 || number > 999) {
+            throw Exception("Число не трехзначное")
+        }
     }
 
     fun checkNumber() {
